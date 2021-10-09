@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Public sans", sans-serif;
+    font-size: 1.4rem;
+    min-height: 100%;
+    background-color: rgb(136, 117, 7);
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+    font-size: 30px;
+    color: rgb(80, 39, 0); 
+      font-style:initial;
+    grid-area: header;
+    background-color:rgba(247, 202, 3, 0.89)
+}
+
+.nanvbar {
+    font-size: 23px;
+  color: rgb(83, 43, 226); 
+    font-style: italic;
+    grid-area: nanvbar;
+    background-color:rgba(177, 71, 1, 0.89)
+}
+
+.main {
+    font-size: 20px;
+    color: rgb(80, 39, 0); 
+      font-style:initial;
+    grid-area: main;
+    background-color:rgb(206, 142, 4)
+    
+}
+
+.main2 {
+    font-size: 20px;
+    color: rgb(80, 39, 0); 
+      font-style:initial;
+    grid-area: main2;
+    background-color:rgb(206, 142, 4)
+}
+
+.footer {
+    font-size: 30px;
+    color: rgb(80, 39, 0); 
+      font-style:initial;
+    grid-area: footer;
+    background-color:rgba(81, 218, 18, 0.568)
+}
+
+.section {
+    font-size: 30px;
+    color: rgb(80, 39, 0); 
+      font-style:initial;
+    grid-area: section;
+    background-color:rgb(248, 220, 167)
+}
+
+.sidebear {
+    font-size: 30px;
+    color: rgb(80, 39, 0); 
+      font-style:initial;
+    grid-area: sidebear;
+    background-color:rgb(250, 194, 90)
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "header"
+    "nanvbar"
+    "main"
+    "main2"
+    "section"
+    "sidebear"
+    "footer"
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        background-color: rgb(136, 117, 7);
+        grid-template-columns: 450px 450px;
+        grid-template-rows: 100px 3px auto 3px 2px 50px 3px  ;
+        grid-template-areas:
+        "header  header"
+        "nanvbar nanvbar"
+        "section sidebear"
+        "section  main"
+        "section  main2"
+        "footer  footer";
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        background-color: rgb(136, 117, 7);
+        grid-template-columns: 639px 639px;
+        grid-template-rows: 100px  3px auto  0px  2px 50px 3px;
+        grid-template-areas:
+        "header  header"
+        "nanvbar nanvbar"
+        "section sidebear"
+        "section  main"
+        "section  main2"
+        "footer  footer" ;
+    }
+}
+
+a{
+  color:rgb(255, 235, 53)
+}
